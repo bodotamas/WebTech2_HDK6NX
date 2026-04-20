@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 1.5rem 2rem 5rem 2rem;
+}
+
+.content {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-card,
+.items-card,
+.map-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+  padding: 1.5rem;
+}
+
+.checkout-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.map {
+  width: 35rem;
+}
+
+.map-card {
+  min-height: 100%;
+}
+
+.buttons-container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  margin-top: 0.5rem;
+  width: min(72rem, 100%);
+}
+
+.payment-button {
+  width: 100%;
+  height: 3.4rem;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+  transition: all 0.25s ease;
+}
+
+.payment-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.28);
+  cursor: pointer;
+}
+
+.payment-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+  .content,
+  .map {
+    width: 100%;
+    max-width: 48rem;
+  }
+
+  .buttons {
+    width: 100%;
+    max-width: 48rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem 1rem 4rem 1rem;
+    gap: 1.25rem;
+  }
+
+  .form-card,
+  .items-card,
+  .map-card {
+    padding: 1.2rem;
+    border-radius: 20px;
+  }
+
+  .payment-button {
+    height: 3.2rem;
+    font-size: 1rem;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 0.75rem 0.75rem 3rem 0.75rem;
+  }
+
+  .form-card,
+  .items-card,
+  .map-card {
+    padding: 1rem;
+  }
+}

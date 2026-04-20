@@ -1,0 +1,250 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 1.5rem 2rem 2rem;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  flex: 3 1 48rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #eef2f7;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.cart-item:hover {
+  background: #f8fafc;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.image-container {
+  flex: 0 0 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.food-info {
+  flex: 1 1 14rem;
+  min-width: 12rem;
+}
+
+.food-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  transition: color 0.25s ease;
+}
+
+.food-name:hover {
+  color: #2563eb;
+}
+
+.quantity-box,
+.price-box,
+.action-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 7rem;
+}
+
+.quantity-box {
+  align-items: flex-start;
+}
+
+.quantity-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.quantity-select {
+  width: 5rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.quantity-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.price-box {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.action-box {
+  align-items: flex-end;
+}
+
+.remove-button {
+  border: none;
+  border-radius: 14px;
+  padding: 0.75rem 1.1rem;
+  background: #fee2e2;
+  color: #dc2626;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.remove-button:hover {
+  background: #fecaca;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 20rem;
+  min-height: 20rem;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+  position: sticky;
+  top: 1.5rem;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.foods-count,
+.total-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  padding: 1rem 1.1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.foods-count::before {
+  content: "Count: ";
+  color: #64748b;
+  font-weight: 600;
+}
+
+.total-price::before {
+  content: "Price: ";
+  color: #64748b;
+  font-weight: 600;
+}
+
+.checkout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+  transition: all 0.25s ease;
+}
+
+.checkout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.28);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin: 1rem;
+  }
+
+  .checkout {
+    position: static;
+    min-height: auto;
+  }
+
+  .cart-item {
+    align-items: flex-start;
+  }
+
+  .action-box {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-container,
+  .food-info,
+  .quantity-box,
+  .price-box,
+  .action-box {
+    width: 100%;
+  }
+
+  .image-container {
+    justify-content: flex-start;
+  }
+
+  .quantity-select {
+    width: 100%;
+    max-width: 8rem;
+  }
+
+  .remove-button {
+    width: 100%;
+  }
+}
