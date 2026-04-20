@@ -23,6 +23,14 @@ Egy modern ételrendelő webalkalmazást tartalmaz — Angular + Node.js + Mongo
 - PayPal SDK
 - Térképes címkezelés
 
+### A projekt indítása
+
+1. Klónozás
+2. A backend/src mappában létre kell hozni egy .env fájlt, ahol meg kell adni a MONGODB URL-t (MongoDB Atlas).
+3. Függöségek letöltése az npm install segítségével
+4. Backend elindítása (npm start) (http://localhost:5001)
+5. Frontend elindítása (npm start) (http://localhost:4200)
+
 ## Előfeltételek
 
 - Node.js (v18+)
