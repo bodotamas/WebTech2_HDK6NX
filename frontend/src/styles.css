@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
-/* Globális alapok */
-* {
+* 
+{
   box-sizing: border-box;
 }
 
-html {
+html 
+{
   font-size: 16px;
   scroll-behavior: smooth;
 }
 
-/* Egységes színpaletta későbbi komponensekhez */
-:root {
+:root 
+{
   --primary: #2563eb;
   --primary-dark: #1d4ed8;
   --accent: #7c3aed;
@@ -25,7 +26,8 @@ html {
   --transition: 0.25s ease;
 }
 
-body {
+body 
+{
   margin: 0;
   font-family: "Inter", sans-serif;
   background-color: var(--background);
@@ -57,14 +59,14 @@ ol {
   list-style: none;
 }
 
-/* Szebb kijelölés */
-::selection {
+::selection 
+{
   background: var(--primary);
   color: #ffffff;
 }
 
-/* Finom scrollbar */
-::-webkit-scrollbar {
+::-webkit-scrollbar 
+{
   width: 10px;
 }
 

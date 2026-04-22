@@ -78,14 +78,14 @@ export const sample_foods:any[]=[
         name: "John Doe",
         email: "john@gmail.com",
         password: "12345",
-        address: "Toronto On",
+        address: "Hawaii",
         isAdmin: true,
       },
       {
         name: "Jane Doe",
         email: "Jane@gmail.com",
         password: "12345",
-        address: "Shanghai",
+        address: "London",
         isAdmin: false,
       },
     ];
